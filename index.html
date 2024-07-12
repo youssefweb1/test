@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resturant</title>
+  <!-- shortcut icon -->
+  <link rel="shortcut icon" href="./imgs/logo.svg" type="image/x-icon">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+  <!-- flowbite -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- scrollreveal  -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+
+<body>
+  <!-- heder -->
+  <header>
+    <nav class="py-4">
+      <div class="container flex justify-between items-center cursor-pointer">
+
+        <div class="text-right">
+          <div>
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+              class="text-black  rounded-lg text-sm  text-center inline-flex items-center gap-3" type="button">
+
+              <span class="flex items-center justify-start gap-2">
+                <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+
+                العربية
+                <img class="w-6" src="imgs/saudi.svg" alt="">
+              </span>
+              : اللغة
+
+            </button>
+
+            <!-- Dropdown menu -->
+            <div id="dropdown"
+              class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">العربية</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">الانجليزية</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">الفرنسية</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">الألمانية</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <a href="#" class="text-right md:hidden "> مطعم الكباب التركي </a>
+          <div class="hidden sm:flex sm:space-x-8 ">
+            <a href="#" class="text-black">شروط الاستخدام</a>
+            <a href="#" class="text-right">سياسة الخصوصية</a>
+            <a href="#" class="text-right">من نحن</a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+    <nav class="sticky top-0 z-40 bg-white py-6 ">
+
+      <div class="container flex justify-between items-center cursor-pointer gap-5">
+        <div class="text-right flex gap-4 items-center justify-center">
+          <div>
+            <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+              class="text-black rounded-lg text-4xl text-center inline-flex items-center" type="button">
+              <i class="fa-regular fa-circle-user"></i>
+            </button>
+
+            <!-- Dropdown menu -->
+            <div id="dropdownHover"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">الدخول
+                    لحساب</a>
+                </li>
+
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">تسجيل
+                    حساب</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a href="#">
+            <i class="fa-solid fa-cart-shopping text-xl"></i>
+          </a>
+        </div>
+        <form class="hidden sm:flex flex-1 items-center justify-center gap-1 max-w-[600px]">
+          <button class="p-3 rounded-lg bg-white text-red-500 w-16 border border-gray-300" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input type="text" class="text-right p-3 rounded-lg w-full outline-none border border-gray-300 bg-white"
+            placeholder="ابحث عن منتج">
+          <div>
+            <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation"
+              class="text-black gap-1  p-3   w-auto text-center  rounded-lg flex justify-center items-center border border-slate-300"
+              type="button">
+              <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
+              التصنيفات
+            </button>
+
+            <!-- Dropdown menu -->
+            <div id="dropdownInformation"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+              <div class="px-4 py-3 text-md text-gray-900 dark:text-white font-bold text-right">
+                الفئة
+              </div>
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownInformationButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-right">المعجنات</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-right">المعجنات</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-right">المعجنات</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-right">المعجنات</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+        <a href="#" class="text-right">
+          <img src="./imgs/logo.svg" alt="logo">
+        </a>
+      </div>
+
+      <div class="container block sm:hidden mt-3 ">
+        <form class="flex-1 flex items-center justify-center gap-1 w-full mt-6">
+          <button class="p-3 rounded-lg bg-white text-red-500 w-16 border border-gray-300" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input type="text" class="text-right p-3 rounded-lg w-full outline-none border border-gray-300 bg-white"
+            placeholder="ابحث عن منتج">
+          <div>
+            <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformationMobile"
+              class="text-black gap-2  p-3   w-auto text-center  rounded-lg flex justify-center items-center border border-slate-300"
+              type="button">
+              <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
+              التصنيفات
+            </button>
+
+            <!-- Dropdown menu -->
+            <div id="dropdownInformationMobile"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+              <div class="px-4 py-3 text-md text-gray-900 dark:text-white font-bold text-right">
+                الفئة
+              </div>
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownInformationMobile">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-right">المعجنات</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-right">المعجنات</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-right">المعجنات</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-right">المعجنات</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+      <nav class="bg-orange-600 p-3 mt-6 w-full">
+        <div class="flex justify-end items-center container">
+          <ul class="flex gap-4 text-start flex-row-reverse text-white overflow-x-auto hide-scrollbar"
+            style="touch-action: pan-x; -webkit-overflow-scrolling: touch;">
+            <li>
+              <a href="#">الرئيسية</a>
+            </li>
+            <li>
+              <a href="#">معجنات</a>
+            </li>
+            <li>
+              <a href="#">شاورما</a>
+            </li>
+            <li>
+              <a href="#">برجر</a>
+            </li>
+            <li>
+              <a href="#">مشاوي</a>
+            </li>
+            <li>
+              <a href="#">معجنات</a>
+            </li>
+            <li>
+              <a href="#">شاورما</a>
+            </li>
+            <li>
+              <a href="#">برجر</a>
+            </li>
+            <li>
+              <a href="#">مشاوي</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </nav>
+  </header>
+
+  <!-- main -->
+  <main>
+    <article>
+
+      <section class="pb-6">
+        <div class="container flex flex-col md:flex-row justify-center items-start">
+          <div class="owl-carousel hero md:w-3/4">
+            <div class="w-full min-h-[400px] bg-[url(../imgs/hero-1.jpg)] bg-cover rounded-md"></div>
+            <div class="w-full h-[400px] bg-[url(../imgs/hero-2.jpg)] bg-cover rounded-md"></div>
+          </div>
+          <div class="w-full md:w-1/4">
+            <ul class="flex flex-col md:ml-8 overflow-hidden rounded-lg border border-slate-300">
+              <h2 class="text-right text-md p-2 bg-orange-600 text-white">التصنيفات</h2>
+              <li
+                class="w-full bg-white transition hover:bg-slate-200 p-3 text-right flex gap-2 justify-end items-center text-md">
+                <a href="#">معجنات</a>
+                <img class="w-6"
+                  src="https://kabab-food.me/storage/58/images/%242y%2410%24MNC2yyfAKhjLqWLS5JRuOkVyKwSZzInb15erCe06N1N6z6I9PJS.png"
+                  alt="">
+              </li>
+              <li
+                class="w-full bg-white transition hover:bg-slate-200 p-3 text-right flex gap-2 justify-end items-center text-md">
+                <a href="#">شاورما</a>
+                <img class="w-6"
+                  src="https://kabab-food.me/storage/58/images/%242y%2410%24ZxGLG4OUZx5uTOobH0WQ0OJdnFycms2KWAiNjeuqxHTrHUO8dvFW.png"
+                  alt="">
+
+              </li>
+              <li
+                class="w-full bg-white transition hover:bg-slate-200 p-3 text-right flex gap-2 justify-end items-center text-md">
+                <a href="#">برجر</a>
+                <img class="w-6"
+                  src="https://kabab-food.me/storage/58/images/%242y%2410%24fWvQ2Ln1Jaz9DzrrrQEpEuWuYmin.U3IuAPpxa11XL0F0S4JFv72.png"
+                  alt="">
+
+              </li>
+              <li
+                class="w-full bg-white transition hover:bg-slate-200 p-3 text-right flex gap-2 justify-end items-center text-md">
+                <a href="#">مشروبات</a>
+                <img class="w-6"
+                  src="https://kabab-food.me/storage/58/images/%242y%2410%24GPls1us5xVC1JfMAechpepc.PvnqjWqRXBlMUac.K9v0EBWcYHJG.png"
+                  alt="">
+
+              </li>
+              <li
+                class="w-full bg-white transition hover:bg-slate-200 p-3 text-right flex gap-2 justify-end items-center text-md">
+                <a href="#">فلافل</a>
+                <img class="w-6"
+                  src="https://kabab-food.me/storage/58/images/%242y%2410%24Qelz3hTgMBiFFpeHXwYcOVGm1OvzhRhsnPdNm6jGelJYe98f6j6.png"
+                  alt="">
+
+              </li>
+              <li
+                class="w-full bg-white transition hover:bg-slate-200 p-3 text-right flex gap-2 justify-end items-center text-md">
+                <a href="#">وجبات</a>
+                <img class="w-6"
+                  src="https://kabab-food.me/storage/58/images/%242y%2410%24N0VTz5QiivxbrDFmAwqwi.S8slf52W3bTf6xBMIAdV963vTM05hC.png"
+                  alt="">
+
+              </li>
+              <li
+                class="w-full bg-white transition hover:bg-slate-200 p-3 text-right flex gap-2 justify-end items-center text-md">
+                <a href="#">مشويات</a>
+                <img class="w-6"
+                  src="https://kabab-food.me/storage/58/images/%242y%2410%24DUUV8t8MaX2ZPuCHRh0yuez4GflP6cVwxz2Gbn0Ye5qrRA64roeK.png"
+                  alt="">
+
+              </li>
+
+              </li>
+              <li
+                class="w-full bg-white transition hover:bg-slate-200 p-3 text-right flex gap-2 justify-end items-center text-md">
+                <a href="#">عرض الكل</a>
+                <i class="fa fa-th text-orange-600 w-6"></i>
+
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-6">
+        <div class="container">
+          <div class="main-heading">
+            <h1>اقسام المطعم</h1>
+            <a href="#">عرض المزيد</a>
+          </div>
+          <main>
+            <div class="owl-carousel sections">
+              <div class="flex cat flex-col gap-2 items-center justify-center  relative">
+                <div class="p-6 border-2  rounded-full">
+                  <img
+                    src="https://kabab-food.me/storage/58/images/%242y%2410%24fWvQ2Ln1Jaz9DzrrrQEpEuWuYmin.U3IuAPpxa11XL0F0S4JFv72.png"
+                    class="">
+                </div>
+                <span>
+                  <h2 class="font-semibold">معجنات</h2>
+                </span>
+              </div>
+
+              <div class="flex cat flex-col gap-2 items-center justify-center  relative">
+                <div class="p-6 border-2  rounded-full">
+                  <img
+                    src="https://kabab-food.me/storage/58/images/%242y%2410%24fWvQ2Ln1Jaz9DzrrrQEpEuWuYmin.U3IuAPpxa11XL0F0S4JFv72.png"
+                    class="">
+                </div>
+                <span>
+                  <h2 class="font-semibold">معجنات</h2>
+                </span>
+              </div>
+
+              <div class="flex cat flex-col gap-2 items-center justify-center  relative">
+                <div class="p-6 border-2  rounded-full">
+                  <img
+                    src="https://kabab-food.me/storage/58/images/%242y%2410%24fWvQ2Ln1Jaz9DzrrrQEpEuWuYmin.U3IuAPpxa11XL0F0S4JFv72.png"
+                    class="">
+                </div>
+                <span>
+                  <h2 class="font-semibold">معجنات</h2>
+                </span>
+              </div>
+
+              <div class="flex cat flex-col gap-2 items-center justify-center  relative">
+                <div class="p-6 border-2  rounded-full">
+                  <img
+                    src="https://kabab-food.me/storage/58/images/%242y%2410%24fWvQ2Ln1Jaz9DzrrrQEpEuWuYmin.U3IuAPpxa11XL0F0S4JFv72.png"
+                    class="">
+                </div>
+                <span>
+                  <h2 class="font-semibold">معجنات</h2>
+                </span>
+              </div>
+
+              <div class="flex cat flex-col gap-2 items-center justify-center  relative">
+                <div class="p-6 border-2  rounded-full">
+                  <img
+                    src="https://kabab-food.me/storage/58/images/%242y%2410%24fWvQ2Ln1Jaz9DzrrrQEpEuWuYmin.U3IuAPpxa11XL0F0S4JFv72.png"
+                    class="">
+                </div>
+                <span>
+                  <h2 class="font-semibold">معجنات</h2>
+                </span>
+              </div>
+
+              <div class="flex cat flex-col gap-2 items-center justify-center  relative">
+                <div class="p-6 border-2  rounded-full">
+                  <img
+                    src="https://kabab-food.me/storage/58/images/%242y%2410%24fWvQ2Ln1Jaz9DzrrrQEpEuWuYmin.U3IuAPpxa11XL0F0S4JFv72.png"
+                    class="">
+                </div>
+                <span>
+                  <h2 class="font-semibold">معجنات</h2>
+                </span>
+              </div>
+              <div class="flex cat flex-col gap-2 items-center justify-center  relative">
+                <div class="p-6 border-2  rounded-full">
+                  <img
+                    src="https://kabab-food.me/storage/58/images/%242y%2410%24fWvQ2Ln1Jaz9DzrrrQEpEuWuYmin.U3IuAPpxa11XL0F0S4JFv72.png"
+                    class="">
+                </div>
+                <span>
+                  <h2 class="font-semibold">معجنات</h2>
+                </span>
+              </div>
+
+              <div class="flex cat flex-col gap-2 items-center justify-center  relative">
+                <div class="p-6 border-2  rounded-full">
+                  <img
+                    src="https://kabab-food.me/storage/58/images/%242y%2410%24fWvQ2Ln1Jaz9DzrrrQEpEuWuYmin.U3IuAPpxa11XL0F0S4JFv72.png"
+                    class="">
+                </div>
+                <span>
+                  <h2 class="font-semibold">معجنات</h2>
+                </span>
+              </div>
+
+            </div>
+          </main>
+        </div>
+      </section>
+
+      <section class="py-6">
+        <div class="container">
+          <div class="main-heading">
+            <h1>معجنات</h1>
+            <a href="#">عرض المزيد</a>
+          </div>
+          <main>
+            <div class="owl-carousel products">
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </main>
+        </div>
+      </section>
+
+      <section class="py-6">
+        <div class="container">
+          <div class="main-heading">
+            <h1>معجنات</h1>
+            <a href="#">عرض المزيد</a>
+          </div>
+          <main>
+            <div class="owl-carousel products">
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </main>
+        </div>
+      </section>
+
+      <section class="py-6">
+        <div class="container">
+          <div class="main-heading">
+            <h1>معجنات</h1>
+            <a href="#">عرض المزيد</a>
+          </div>
+          <main>
+            <div class="owl-carousel products">
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </main>
+        </div>
+      </section>
+
+      <section class="py-6">
+        <div class="container">
+          <div class="main-heading">
+            <h1>معجنات</h1>
+            <a href="#">عرض المزيد</a>
+          </div>
+          <main>
+            <div class="owl-carousel products">
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-hidden flex flex-col items-end justify-center border border-slate-300 rounded-lg">
+                <div class="w-full h-[200px] bg-[url(../imgs/products.jpg)] bg-cover"></div>
+                <div class="p-4">
+                  <h2 class="font-bold text-right text-sm mb-2">وجبة برجر عائلي</h2>
+                  <h2 class="text-orange-600 text-right text-md font-extrabold">$50</h2>
+                </div>
+                <div class="flex gap-2 w-full justify-between px-2 pb-2 flex-row-reverse">
+
+                  <a href="#" class="p-2 font-bold text-xs text-center flex-[2] bg-orange-600 text-white rounded-lg">
+
+                    <i class="fa fa-shopping-cart"></i>
+
+                    أضف الي السلة
+
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </main>
+        </div>
+      </section>
+
+    </article>
+
+    <div class="loading-page">
+      <div class="loader"></div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="bg-orange-100 pt-16">
+    <div class="container grid gap-8 sm:grid-cols-2 md:grid-cols-4 col-reverse items-start">
+
+      <div class="flex items-end flex-col justify-center gap-4">
+        <h1 class="text-xl text-right font-bold">
+          اتصل بنا
+        </h1>
+        <ul class="flex flex-col items-end justify-center gap-2">
+          <li class="text-right">
+            اتصل بنا
+          </li>
+          <li class="text-right">
+            واتساب
+          </li>
+          <li class="text-right">
+            0123456789
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-end flex-col justify-center gap-4">
+        <h1 class="text-xl text-right font-bold">
+          روابط
+        </h1>
+        <ul class="flex flex-col items-end justify-center gap-2">
+          <li class="text-right">
+            <a href="#">
+              سياسة الخصوصية
+            </a>
+          </li>
+          <li class="text-right">
+            <a href="#">
+              شروط الاستخدام
+            </a>
+          </li>
+          <li class="text-right">
+            <a href="#">
+              من نحن
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-end flex-col justify-center gap-4">
+        <h1 class="text-xl font-bold text-right">
+          التواصل الاجتماعي
+        </h1>
+        <ul class="flex justify-end items-center gap-4">
+          <li>
+            <a href="#" class="text-xl text-blue-800">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-xl text-black">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-xl text-blue-900">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-xl text-cyan-700">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-end flex-col justify-center gap-4">
+        <img src="./imgs/logo.svg" alt="logo" class="self-center sm:self-end">
+        <p class="text-center self-center sm:text-right sm:self-end">
+          اكتشف نكهات لا تُقاوم في مطعمنا الراقي - حيث يجتمع الطعم الرفيع بالجو الأنيق!
+        </p>
+      </div>
+
+    </div>
+    <div class="container text-center text-xl mt-16">
+      <p>
+        جميع الحقوق محفوظة @ 2024
+      </p>
+    </div>
+  </footer>
+
+  <!-- jquery -->
+  <script src="./js/jquery.min.js"></script>
+  <!-- carousel -->
+  <script src="./js/owl.carousel.min.js"></script>
+  <!-- flowbite  -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+  <!-- js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="./js/main.js"></script>
+</body>
+</html>
