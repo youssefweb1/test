@@ -55,17 +55,14 @@ margin: 20,
 });
 });
 
-// scroll animation
 const sr = ScrollReveal({
-origin: "left",
+origin: "bottom",
 distance: "20px",
-duration: 1000,
-delay: 500,
+duration: 900,
 });
 
-sr.reveal(".left-side-1sec");
-
-sr.reveal(".reveal");
+sr.reveal(".reveal", { delay: 2000 });
+sr.reveal(".reveal2 ", { delay: 1000 });
 
 gsap.fromTo(
 ".loading-page",
@@ -74,6 +71,6 @@ gsap.fromTo(
 opacity: 0,
 duration: 1,
 display: "none",
-delay: 2,
+delay: 1,
 }
 );

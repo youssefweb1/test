@@ -344,6 +344,11 @@ template {
  * Add the correct display in IE 10.
  */
 
+ .owl-carousel
+ {
+  z-index:-1 !important;
+ }
+
 [hidden] {
   display: none;
 }
@@ -411,4 +416,8 @@ ul {
 }
 @keyframes l15{ 
   100%{transform: rotate(1turn)}
+}
+.nav-mobile
+{
+  z-index: 999999 !important;
 }

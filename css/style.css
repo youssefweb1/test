@@ -935,7 +935,7 @@ body {
 
 .bg-orange-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 237 213 / var(--tw-bg-opacity));
+  background-color: #ffeee5 !important;
 }
 
 .bg-orange-500 {
