@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -174,7 +174,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -184,7 +185,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -344,19 +346,17 @@ template {
  * Add the correct display in IE 10.
  */
 
- .owl-carousel
- {
-  z-index:-1 !important;
- }
+.owl-carousel {
+  z-index: -1 !important;
+}
 
 [hidden] {
   display: none;
 }
 
 .hide-scrollbar {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
-  
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 ul {
   touch-action: pan-x;
@@ -366,11 +366,9 @@ ul {
   display: none; /* Chrome, Safari, and Opera */
 }
 
-.cat img 
-{
-  width : 50px !important;
-  height : 50px !important;
-
+.cat img {
+  width: 50px !important;
+  height: 50px !important;
 }
 
 /* loading */
@@ -388,9 +386,8 @@ ul {
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  color: #9BDC23;
+  color: #9bdc23;
 }
-
 
 .loader {
   width: 50px;
@@ -402,7 +399,7 @@ ul {
   animation: l15 1s infinite linear;
 }
 .loader::before,
-.loader::after {    
+.loader::after {
   content: "";
   grid-area: 1/1;
   margin: 2px;
@@ -414,10 +411,18 @@ ul {
   margin: 8px;
   animation-duration: 3s;
 }
-@keyframes l15{ 
-  100%{transform: rotate(1turn)}
+@keyframes l15 {
+  100% {
+    transform: rotate(1turn);
+  }
 }
-.nav-mobile
-{
+.nav-mobile {
   z-index: 999999 !important;
+}
+#dropdown,
+#dropdownHover {
+  margin-left: 20px !important;
+}
+#dropdownInformationMobile {
+  margin-left: -13px !important;
 }

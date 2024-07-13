@@ -57,12 +57,12 @@ margin: 20,
 
 const sr = ScrollReveal({
 origin: "bottom",
-distance: "20px",
+distance: "50px",
 duration: 900,
 });
 
-sr.reveal(".reveal", { delay: 2000 });
-sr.reveal(".reveal2 ", { delay: 1000 });
+sr.reveal(".reveal", { delay: 1000 });
+sr.reveal(".reveal2 ", { delay: 800 });
 
 gsap.fromTo(
 ".loading-page",
